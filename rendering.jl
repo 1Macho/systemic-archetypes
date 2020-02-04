@@ -1,6 +1,7 @@
 using SimpleDirectMediaLayer
 const SDL2 = SimpleDirectMediaLayer
 
+
 function pollEvent!()
     #SDL2.Event() = [SDL2.Event(NTuple{56, Uint8}(zeros(56,1)))]
     SDL_Event() = Array{UInt8}(zeros(56))
@@ -41,7 +42,7 @@ function drawinit()
 end
 
 function drawsetcolor(renderer,r,g,b,a=255)
-    SDL2.SetRenderDrawColor(renderer, r, g, b, a)
+    SDL2.SetRenderDrawColor(renderer,r,g,b,a)
 end
 
 function drawclear(renderer)
